@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="prism.css">
+    <title>Postman | Tapesh</title>
+    <style>
+        #responsePre {
+            width: 1000px;
+            max-height: 500px;
+            max-width: 1000px;
+        }
+
+        #addParams {
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="my-3"> Welcome to PostMan By Tapesh</h2>
+    </div>
+
+    <div class="container d-flex flex-column">
+        <!-- url box start -->
+        <div class="form-group d-flex ">
+            <label for="url" class="col-sm-2 col-form-label">URL</label>
+            <input type="text" id="url" class="form-control" placeholder="Enter URL here">
+        </div>
+        <!-- url box end  -->
+
+        <!-- request type starts  -->
+        <div class="form-group d-flex my-3">
+            <label for="url" class="col-sm-2 col-form-label">Requests</label>
+            <div class="d-flex flex-column">
+                <div class="form-check ">
+                    <input class="form-check-input" type="radio" name="requestType" id="get" value="GET" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        GET
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <input class="form-check-input" type="radio" name="requestType" id="post" value="POST">
+                    <label class="form-check-label" for="exampleRadios2">
+                        POST
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- request type ends  -->
+
+        <!-- content type box start -->
+        <div class="form-group d-flex ">
+            <label for="url" class="col-sm-2 col-form-label">Content Type</label>
+            <div class="d-flex flex-column">
+                <div class="form-check ">
+                    <input class="form-check-input" type="radio" name="contentType" id="jsonRadio" value="json">
+                    <label class="form-check-label" for="json">
+                        JSON
+                    </label>
+                </div>
+                <div class="form-check ">
+                    <input class="form-check-input" type="radio" name="contentType" id="paramsRadio" value="params"
+                        checked>
+                    <label class="form-check-label" for="params">
+                        Custom Parameters
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- content type box end -->
+
+        <!-- parameters box starts starts -->
+        <div id="parametersBox" class="">
+            <div class="row">
+                <label for="url" class="col-sm-2 col-form-label">Parameters</label>
+                <div class="col">
+                    <input type="text" id="parameterKey1" class="form-control" placeholder="Enter Parameter 1 Key">
+                </div>
+                <div class="col">
+                    <input type="text" id="parameterValue1" class="form-control" placeholder="Enter Parameter 1 Value">
+                </div>
+                <button class="col-1 btn btn-primary" id="addParams">+</button>
+            </div>
+            <div id="params"></div>
+        </div>
+        <!-- parameters box starts ends -->
+
+        <!-- json request start -->
+        <div class="form-group my-3" id="requestJsonBox">
+            <label for="jsonBox" class="col-sm-2 col-form-label">Enter Request Json Here</label>
+            <textarea class="form-control" id="requestJsonText"></textarea>
+        </div>
+        <!-- json request ebd -->
+
+        <!-- submit btn  -->
+        <div class="form-group d-flex my-3">
+            <div class="col-sm-10">
+                <button id="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+        <div class="form-group d-flex my-3" id="responseJsonBox">
+            <label for="responsejsonBox" class="col-sm-2 col-form-label">Response</label>
+            <!-- <textarea class="form-control" id="responseJsonText" rows="3">Your response will appear here</textarea> -->
+
+            <pre id="responsePre"
+                class="language-javascript"> <code id="responsePrism" class="language-javascript">Your Response will be shown here</code></pre>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="prism.js"></script>
+
+
+</body>
+
+</html>
